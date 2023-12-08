@@ -11,11 +11,11 @@ func (s *Stack) Push(item int) {
 }
 
 func (s *Stack) Pop() int {
-	left := len(s.items)
-	if left == 0 {
+	top := len(s.items)
+	if top == 0 {
 		return -1
 	}
-	item, items := s.items[left-1], s.items[0:left-1]
+	item, items := s.items[top-1], s.items[0:top-1]
 	s.items = items
 	return item
 }
